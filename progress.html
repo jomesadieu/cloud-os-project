@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Progress | Cloud OS Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="eyebrow">CCIS-673 · Operating Systems Design</p>
+      <h1>Project Progress</h1>
+      <p>Track the steps involved in building and deploying the website.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="container nav-links">
+      <a href="index.html">Home</a>
+      <a href="progress.html" aria-current="page">Project Progress</a>
+      <a href="architecture.html">Cloud Architecture</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Deployment checklist</h2>
+      <p>
+        Select the tasks as you complete them. Your choices are saved in
+        this browser on this device.
+      </p>
+
+      <div class="checklist">
+        <label>
+          <input type="checkbox" data-task="plan">
+          Plan the website and hosting resources
+        </label>
+        <label>
+          <input type="checkbox" data-task="build">
+          Build and test the website locally
+        </label>
+        <label>
+          <input type="checkbox" data-task="github">
+          Store the website files in a GitHub repository
+        </label>
+        <label>
+          <input type="checkbox" data-task="deploy">
+          Deploy the website with Cloudflare Pages
+        </label>
+        <label>
+          <input type="checkbox" data-task="test">
+          Test navigation, security headers, and the 404 page
+        </label>
+        <label>
+          <input type="checkbox" data-task="update">
+          Demonstrate an update and a rollback
+        </label>
+        <label>
+          <input type="checkbox" data-task="report">
+          Prepare the report, source ZIP, and video
+        </label>
+      </div>
+
+      <p id="progress-status" role="status" aria-live="polite">
+        Progress: 0 of 7 tasks complete.
+      </p>
+
+      <button id="reset-progress" type="button">Reset checklist</button>
+    </section>
+
+    <section class="card">
+      <h2>About this interaction</h2>
+      <p>
+        This checklist uses JavaScript and browser storage. The selections
+        stay on the browser and device where they were made; they are not
+        sent to a server or shared with other visitors.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Cloud OS Project · CCIS-673</p>
+    </div>
+  </footer>
+</body>
+</html>
