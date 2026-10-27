@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Architecture | Cloud OS Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="eyebrow">CCIS-673 · Operating Systems Design</p>
+      <h1>Cloud Architecture</h1>
+      <p>How the project files reach a visitor's browser.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="container nav-links">
+      <a href="index.html">Home</a>
+      <a href="progress.html">Project Progress</a>
+      <a href="architecture.html" aria-current="page">Cloud Architecture</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>How a visitor sees the site</h2>
+      <ol>
+        <li>A visitor requests the website in a browser using its HTTPS address.</li>
+        <li>Cloudflare Pages receives the request and serves the deployed files.</li>
+        <li>The browser displays the HTML and CSS and runs the JavaScript.</li>
+      </ol>
+      <p>
+        GitHub stores the source files. When changes are pushed to the
+        connected production branch, Cloudflare can deploy the updated site.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Who manages what?</h2>
+      <div class="grid">
+        <div>
+          <h3>Cloudflare manages</h3>
+          <ul>
+            <li>The hosting infrastructure and delivery of deployed files.</li>
+            <li>The platform used to build and deploy the connected site.</li>
+            <li>HTTPS for the provided website address.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>The developer manages</h3>
+          <ul>
+            <li>The website's content, code, and accessibility.</li>
+            <li>Repository access and account security.</li>
+            <li>Deployment settings, testing, and published changes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Cloud hosting and a local server</h2>
+      <p>
+        With a local web server, the owner typically installs server software,
+        maintains the operating system, applies updates, and manages network
+        availability. A managed cloud platform handles much of the underlying
+        infrastructure, while the developer remains responsible for the site
+        and its configuration.
+      </p>
+      <p>
+        HTTPS protects data while it travels between the browser and the
+        service. It does not decide who is authorized to view a page, and it
+        does not hide secrets placed in publicly delivered JavaScript.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Cloud OS Project · CCIS-673</p>
+    </div>
+  </footer>
+</body>
+</html>
